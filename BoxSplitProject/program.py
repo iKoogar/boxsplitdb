@@ -1,6 +1,6 @@
-import BoxSplitProject.data.mongo_setup as mongo_setup
+import data.mongo_setup as mongo_setup
 
-import boxsplitdb.BoxSplitProject.services.data_service as svc
+import services.data_service as svc
 
 
 def main(): 
