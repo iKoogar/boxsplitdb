@@ -1,15 +1,17 @@
 import mongoengine
-from data.split import Split
+import datetime
+from BoxSplitProject.data.split import Split
+
 
 class Box(mongoengine.Document):
-	leader_user_id = mongoengine.ObjectIdField(required = true)
-	name = mongoengine.StringField(required = true)
-	description = mongoengine.StringField(required = true)
+	leader_user_id = mongoengine.ObjectIdField(required = True)
+	name = mongoengine.StringField(required = True)
+	description = mongoengine.StringField(required = True)
 	state = mongoengine.IntField(default = 0)
 	creation_date = mongoengine.DateTimeField(default = datetime.datetime.now)
 	splits = mongoengine.EmbeddedDocumentListField(Split)
 
-		meta = {
-		'db_alias' = 'core'
-		'collection': = 'boxes'
-	}
+	#	meta = {
+	#	'db_alias' = 'core'
+	#	'collection': = 'boxes'
+	#}

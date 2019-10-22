@@ -1,13 +1,14 @@
 import mongoengine
 
+
 class User(mongoengine.Document):
-	user_id = mongoengine.ObjectIdField(required = true)
-	name = mongoengine.StringField(required = true)
-	email = mongoengine.StringField(required = true)
+	user_id = mongoengine.ObjectIdField(required = True)
+	name = mongoengine.StringField(required = True)
+	email = mongoengine.StringField(required = True)
 
 	# social media stuff
 
-	meta = {
-		'db_alias' = 'core'
-		'collection': = 'users'
-	}
+	#meta = {
+	#	'db_alias' = 'core'
+	#	'collection': = 'users'
+	#}
