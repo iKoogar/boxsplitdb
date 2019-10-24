@@ -1,6 +1,6 @@
 import mongoengine
 import datetime
-from BoxSplitProject.data.split import Split
+from data.split import Split
 
 
 class Box(mongoengine.Document):
