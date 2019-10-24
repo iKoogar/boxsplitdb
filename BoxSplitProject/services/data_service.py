@@ -2,9 +2,9 @@ import bson
 import datetime
 
 
-from BoxSplitProject.data.box import Box
-from BoxSplitProject.data.split import Split
-from BoxSplitProject.data.user import User
+from box import Box
+from split import Split
+from user import User
 
 def create_account(name: str, email: str) -> User:
 	user = User()
