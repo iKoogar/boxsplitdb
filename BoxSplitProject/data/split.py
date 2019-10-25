@@ -9,6 +9,6 @@ class Split(mongoengine.EmbeddedDocument):
 	price_cents = mongoengine.IntField(required = True)
 
 	meta = {
-		'db_alias' = 'core'
-		'collection': = 'splits'
+		'db_alias': 'core',
+		'collection': 'splits'
 	}

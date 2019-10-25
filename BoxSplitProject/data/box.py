@@ -12,6 +12,6 @@ class Box(mongoengine.Document):
 	splits = mongoengine.EmbeddedDocumentListField(Split)
 
 	meta = {
-		'db_alias' = 'core'
-		'collection': = 'boxes'
+		'db_alias': 'core',
+		'collection': 'boxes'
 	}
