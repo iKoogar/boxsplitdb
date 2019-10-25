@@ -11,7 +11,7 @@ class Box(mongoengine.Document):
 	creation_date = mongoengine.DateTimeField(default = datetime.datetime.now)
 	splits = mongoengine.EmbeddedDocumentListField(Split)
 
-	#	meta = {
-	#	'db_alias' = 'core'
-	#	'collection': = 'boxes'
-	#}
+	meta = {
+		'db_alias' = 'core'
+		'collection': = 'boxes'
+	}

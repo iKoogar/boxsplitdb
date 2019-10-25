@@ -8,7 +8,7 @@ class User(mongoengine.Document):
 
 	# social media stuff
 
-	#meta = {
-	#	'db_alias' = 'core'
-	#	'collection': = 'users'
-	#}
+	meta = {
+		'db_alias' = 'core'
+		'collection': = 'users'
+	}

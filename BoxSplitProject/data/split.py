@@ -8,7 +8,7 @@ class Split(mongoengine.EmbeddedDocument):
 	state = mongoengine.IntField(default = 0)
 	price_cents = mongoengine.IntField(required = True)
 
-	#meta = {
-	#	'db_alias' = 'core'
-	#	'collection': = 'splits'
-	#}
+	meta = {
+		'db_alias' = 'core'
+		'collection': = 'splits'
+	}
