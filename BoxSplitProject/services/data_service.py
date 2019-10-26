@@ -5,7 +5,7 @@ from data.box import Box
 from data.split import Split
 from data.user import User
 
-# user stuff =========================================================================================================
+# user stuff ==========================================================================================================
 
 def create_account(name: str, email: str) -> User:
 	user = User()
@@ -20,24 +20,23 @@ def find_account_by_email(email: str) -> User:
     user = User.objects(email=email).first()
     return user
 
-# box, split stuff ==========================================================================================================
+# box, split stuff ====================================================================================================
 
-def box_create():
-
-
-def box_state_set():
+def create_box():
 
 
-def box_add_split():
+def set_box_state():
 
 
-def split_assign_participant():
+def add_split_to_box():
 
 
-def split_remove_participant():
+def get_box_from_id():
 
 
+def assign_participant_to_split():
 
 
+def remove_participant_from_split():
 
 

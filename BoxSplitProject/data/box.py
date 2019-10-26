@@ -4,6 +4,7 @@ from data.split import Split
 
 
 class Box(mongoengine.Document):
+	box_id = mongoengine.ObjectIdField()
 	leader_user_id = mongoengine.ObjectIdField(required = True)
 	name = mongoengine.StringField(required = True)
 	description = mongoengine.StringField(required = True)
