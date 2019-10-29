@@ -31,8 +31,9 @@ def create_box(id: str, n: str, d: str) -> Box:
     box.save()
     return box
 
-#def set_box_state(state: int):
-
+def set_box_state(s: int, box : Box):
+    box.state = s
+    return box
 
 #def add_split_to_box(split: Split):
 
