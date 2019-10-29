@@ -8,12 +8,12 @@ from data.user import User
 # user stuff ==========================================================================================================
 
 def create_account(name: str, email: str) -> User:
-	user = User()
-	user.name = name
-	user.email = email
+    user = User()
+    user.name = name
+    user.email = email
 
-	user.save()
-	return user
+    user.save()
+    return user
 
 
 def find_account_by_email(email: str) -> User:
@@ -23,13 +23,13 @@ def find_account_by_email(email: str) -> User:
 # box, split stuff ====================================================================================================
 
 def create_box(id: str, n: str, d: str) -> Box:
-	box = Box()
-	box.leader_user_id = id
-	box.name = n
-	box.description = d
+    box = Box()
+    box.leader_user_id = id
+    box.name = n
+    box.description = d
 
-	box.save()
-	return box
+    box.save()
+    return box
 
 def set_box_state(state: int):
 
