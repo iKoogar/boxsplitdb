@@ -22,8 +22,14 @@ def find_account_by_email(email: str) -> User:
 
 # box, split stuff ====================================================================================================
 
-def create_box(leader_id: str, name: str, description: str) -> Box:
+def create_box(id: str, n: str, d: str) -> Box:
+	box = Box()
+	box.leader_user_id = id
+	box.name = n
+	box.description = d
 
+	box.save()
+	return box
 
 def set_box_state(state: int):
 
