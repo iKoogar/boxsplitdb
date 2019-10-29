@@ -31,18 +31,18 @@ def create_box(id: str, n: str, d: str) -> Box:
     box.save()
     return box
 
-def set_box_state(state: int):
+#def set_box_state(state: int):
 
 
-def add_split_to_box(split: Split):
+#def add_split_to_box(split: Split):
 
 
-def get_box_from_id(id: str) -> Box:
+#def get_box_from_id(id: str) -> Box:
 
 
-def assign_participant_to_split(split: Split, participant_id: str):
+#def assign_participant_to_split(split: Split, participant_id: str):
 
 
-def remove_participant_from_split(split: Split, participant_id: str):
+#def remove_participant_from_split(split: Split, participant_id: str):
 
 
