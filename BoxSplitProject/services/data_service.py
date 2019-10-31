@@ -58,7 +58,7 @@ def add_split_to_box(box: Box, split: Split):
     box.update()
 
 
-def get_box_from_id(id: str) -> Box:
+#def get_box_from_id(id: str) -> Box:
 
 
 #def assign_participant_to_split(split: Split, participant_id: str):
