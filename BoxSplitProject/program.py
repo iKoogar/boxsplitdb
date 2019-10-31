@@ -7,8 +7,8 @@ def main():
     mongo_setup.global_init()
     #split = create_split("split0", "test", 5)
     user = svc.find_account_by_email("poog@split.box")
-    mongo
-    
+
+
 
 
 
