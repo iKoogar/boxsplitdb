@@ -1,5 +1,7 @@
 import mongoengine
-from data.box import Box
+
+import Box
+import Split
 
 
 class User(mongoengine.Document):
