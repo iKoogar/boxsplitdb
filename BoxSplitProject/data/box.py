@@ -5,7 +5,7 @@ from data.split import Split
 
 class Box(mongoengine.Document):
 	box_id = mongoengine.ObjectIdField()
-	leader_user_id = mongoengine.ObjectIdField(required = True)
+	leader = ReferenceField(User, required = True)
 	name = mongoengine.StringField(required = True)
 	description = mongoengine.StringField(required = True)
 	state = mongoengine.IntField(default = 0)
@@ -16,3 +16,4 @@ class Box(mongoengine.Document):
 		'db_alias': 'core',
 		'collection': 'boxes'
 	}
+

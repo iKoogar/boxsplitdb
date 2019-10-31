@@ -22,25 +22,37 @@ def find_account_by_email(email: str) -> User:
 
 # box, split stuff ====================================================================================================
 
-def create_box(id: str, n: str, d: str) -> Box:
+def create_box(l: User, n: str, d: str) -> Box:
     box = Box()
-    box.leader_user_id = id
+    box.leader = l
     box.name = n
     box.description = d
 
     box.save()
     return box
 
-def set_box_state(s: int, box : Box):
+def set_box_state(s: int, box : Box) -> Box:
     box.state = s
 
-    box.save()
+    box.update()
     return box
 
-#def add_split_to_box(split: Split):
+def create_split(n: str, d: str, p: int) -> Split:
+    split = Split()
+    split.name = n
+    split.description = d
+    split.price_cents = p
+
+    return split
 
 
-#def get_box_from_id(id: str) -> Box:
+def add_split_to_box(box: Box, split: Split):
+    box.splits.append(split)
+
+    box.update()
+
+
+def get_box_from_id(id: str) -> Box:
 
 
 #def assign_participant_to_split(split: Split, participant_id: str):
