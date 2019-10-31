@@ -20,10 +20,7 @@ def find_account_by_email(email: str) -> User:
     user = User.objects(email=email).first()
     return user
 
-def add_box_to_user(b: Box, u: User):
-    u.own_boxes.append(b)
 
-    u.update()
 
 # box, split stuff ====================================================================================================
 
