@@ -1,5 +1,8 @@
 import mongoengine
 
+from data.box import Box
+from data.split import Split
+
 
 class User(mongoengine.Document):
 	user_id = mongoengine.ObjectIdField()
