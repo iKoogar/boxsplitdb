@@ -1,5 +1,5 @@
 import mongoengine
-from box import Box
+from data.box import Box
 
 
 class User(mongoengine.Document):
