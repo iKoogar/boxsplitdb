@@ -1,6 +1,6 @@
 import mongoengine
 from data.user import User
-form data.box import Box
+from data.box import Box
 
 
 class Split(mongoengine.EmbeddedDocument):
