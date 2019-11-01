@@ -54,6 +54,11 @@ def create_split(n: str, d: str, p: int) -> Split:
     return split
 
 
+def find_split_by_id(id: str) -> Split:
+    split = Split.objects(split_id = id).first()
+    return split
+
+
 def add_split_to_box(box: Box, split: Split):
     box.splits.append(split)
 
