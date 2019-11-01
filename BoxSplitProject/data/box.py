@@ -1,10 +1,10 @@
 import mongoengine
 import datetime
+from data.split import Split
+from data.user import User
 
 
 class Box(mongoengine.Document):
-    from data.split import Split
-    from data.user import User
     box_id = mongoengine.ObjectIdField()
     leader = mongoengine.ReferenceField(User, required=True)
     name = mongoengine.StringField(required=True)
