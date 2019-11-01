@@ -10,8 +10,8 @@ def main():
     box = svc.find_box_by_id("5dbc8670e3e74473175d283f")
     split = svc.find_split_by_id("5dbc8670e3e74473175d283e")
 
-    user.boxes.append(box)
-    box.splits.append(split)
+    user.boxes.append(box.id)
+    box.splits.append(split.id)
 
     user.save()
     box.save()
