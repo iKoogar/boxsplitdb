@@ -12,7 +12,7 @@ class Box(mongoengine.Document):
     state = mongoengine.IntField(default=0)
     creation_date = mongoengine.DateTimeField(default=datetime.datetime.now)
 
-    splits = mongoengine.DocumentListField(mongoengine.ReferenceField(Split))
+    splits = mongoengine.ListField(mongoengine.ReferenceField(Split))
 
     meta = {
         'db_alias': 'core',
