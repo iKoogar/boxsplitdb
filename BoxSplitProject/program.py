@@ -13,6 +13,8 @@ def main():
     user.boxes.append(box)
     box.splits.append(split)
 
+    user.update()
+    box.update()
 
 
 
