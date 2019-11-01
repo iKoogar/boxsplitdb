@@ -12,10 +12,8 @@ def main():
 
     user.boxes.append(box)
     box.splits.append(split)
-
-    user.update()
-    box.update()
-
+    print (user.boxes)
+    print (box.splits)
 
 
 
