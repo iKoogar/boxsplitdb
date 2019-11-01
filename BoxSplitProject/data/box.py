@@ -1,7 +1,7 @@
 import mongoengine
 import datetime
-from data.split import Split
-from data.user import User
+import Split
+import User
 
 
 class Box(mongoengine.Document):
