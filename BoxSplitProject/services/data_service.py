@@ -40,8 +40,8 @@ def set_box_state(s: int, box : Box) -> Box:
     return box
 
 
-def find_box_by_id(id: str) -> Box:
-    box = Box.objects.get(box_id = id).first()
+def find_box_by_id(box_id: str) -> Box:
+    box = Box.objects.get(id = box_id).first()
     print("found box", box.name)
     return box
 
@@ -56,8 +56,8 @@ def create_split(n: str, d: str, p: int) -> Split:
     return split
 
 
-def find_split_by_id(id: str) -> Split:
-    split = Split.objects(split_id = id).first()
+def find_split_by_id(split_id: str) -> Split:
+    split = Split.objects(id = split_id).first()
     return split
 
 
