@@ -16,7 +16,7 @@ def create_user(name: str, email: str) -> User:
     return user
 
 
-def find_account_by_email(email: str) -> User:
+def find_user_by_email(email: str) -> User:
     user = User.objects(email=email).first()
     return user
 
@@ -39,7 +39,9 @@ def set_box_state(s: int, box : Box) -> Box:
     return box
 
 
-#def find_box_by_
+def find_box_by_id(id: str) -> Box:
+    box = Box.objects(box_id = id).first()
+    return box
 
 
 def create_split(n: str, d: str, p: int) -> Split:
@@ -48,6 +50,7 @@ def create_split(n: str, d: str, p: int) -> Split:
     split.description = d
     split.price_cents = p
 
+    split.save()
     return split
 
 

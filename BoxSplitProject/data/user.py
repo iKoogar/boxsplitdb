@@ -7,8 +7,10 @@ class User(mongoengine.Document):
 	user_id = mongoengine.ObjectIdField()
 	name = mongoengine.StringField(required = True)
 	email = mongoengine.StringField(required = True)
-	own_boxes = mongoengine.ListField(mongoengine.ReferenceField(Box))
-	own_splits = mongoengine.EmbeddedDocumentListField(Split)
+	creation_date = mongoengine.DateTimeField(default=datetime.datetime.now)
+
+	boxes = mongoengine.ListField(mongoengine.ReferenceField(Box))
+	splits = mongoengine.ListField(mongoengine.ReferenceField(Split))
 
 	# social media stuff
 
