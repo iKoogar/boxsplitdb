@@ -1,5 +1,4 @@
 import mongoengine
-from data.user import User
 
 
 class Split(mongoengine.EmbeddedDocument):
@@ -8,3 +7,5 @@ class Split(mongoengine.EmbeddedDocument):
     description = mongoengine.StringField(required = True)
     state = mongoengine.IntField(default = 0)
     price_cents = mongoengine.IntField(required = True)
+
+from data.user import User

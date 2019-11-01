@@ -1,7 +1,6 @@
 import mongoengine
 import datetime
-from data.split import Split
-from data.user import User
+
 
 
 class Box(mongoengine.Document):
@@ -17,3 +16,6 @@ class Box(mongoengine.Document):
         'db_alias': 'core',
         'collection': 'boxes'
     }
+
+from data.split import Split
+from data.user import User

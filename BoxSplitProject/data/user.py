@@ -1,5 +1,4 @@
 import mongoengine
-from BoxSplitProject.data.box import Box
 
 
 class User(mongoengine.Document):
@@ -14,3 +13,5 @@ class User(mongoengine.Document):
 		'db_alias': 'core',
 		'collection': 'users'
 	}
+
+from BoxSplitProject.data.box import Box
