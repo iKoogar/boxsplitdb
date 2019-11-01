@@ -18,6 +18,7 @@ def create_user(name: str, email: str) -> User:
 
 def find_user_by_email(email: str) -> User:
     user = User.objects(email=email).first()
+    print("found user : ", user.name)
     return user
 
 

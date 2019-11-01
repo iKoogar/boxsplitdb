@@ -6,9 +6,9 @@ import services.data_service as svc
 def main(): 
     mongo_setup.global_init()
 
-    split = svc.find_split_by_id("5dbc8670e3e74473175d283e")
-    box = svc.find_box_by_id("5dbc8670e3e74473175d283f")
     user = svc.find_user_by_email("poog@split.box")
+    box = svc.find_box_by_id("5dbc8670e3e74473175d283f")
+    split = svc.find_split_by_id("5dbc8670e3e74473175d283e")
 
     user.boxes.append(box)
     box.splits.append(split)
