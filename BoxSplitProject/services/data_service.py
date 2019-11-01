@@ -57,7 +57,7 @@ def create_split(n: str, d: str, p: int) -> Split:
 
 
 def find_split_by_id(split_id: str) -> Split:
-    split = Split.objects(id = split_id)
+    split = Split.objects.get(id = split_id)
     return split
 
 
