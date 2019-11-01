@@ -7,7 +7,7 @@ from data.user import User
 
 # user stuff ==========================================================================================================
 
-def create_account(name: str, email: str) -> User:
+def create_user(name: str, email: str) -> User:
     user = User()
     user.name = name
     user.email = email
@@ -24,9 +24,8 @@ def find_account_by_email(email: str) -> User:
 
 # box, split stuff ====================================================================================================
 
-def create_box(l: User, n: str, d: str) -> Box:
+def create_box(n: str, d: str) -> Box:
     box = Box()
-    box.leader = l
     box.name = n
     box.description = d
 
@@ -39,7 +38,11 @@ def set_box_state(s: int, box : Box) -> Box:
     box.update()
     return box
 
-def create_split(b: Box, n: str, d: str, p: int) -> Split:
+
+def find_box_by_
+
+
+def create_split(n: str, d: str, p: int) -> Split:
     split = Split()
     split.parent_box = b
     split.name = n

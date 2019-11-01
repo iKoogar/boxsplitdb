@@ -5,8 +5,11 @@ import services.data_service as svc
 
 def main(): 
     mongo_setup.global_init()
-    #split = create_split("split0", "test", 5)
-    user = svc.find_account_by_email("poog@split.box")
+
+    split = svc.create_split("split0", "test", 5)
+    box = svc.create_box("box1", "testbox")
+    user = svc.create_user("idiot", "poog@split.box")
+
 
 
 
