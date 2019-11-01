@@ -10,6 +10,8 @@ def main():
     box = svc.find_box_by_id("5dbc8670e3e74473175d283e")
     user = svc.find_user_by_email("poog@split.box")
 
+    print(box.name)
+
     user.boxes.append(box)
     box.splits.append(split)
 
