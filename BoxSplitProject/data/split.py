@@ -1,9 +1,9 @@
 import mongoengine
-from data.user import User
+#from data.user import User
 
 
 class Split(mongoengine.EmbeddedDocument):
-    participant = mongoengine.ReferenceField(User)
+#   participant = mongoengine.ReferenceField(User)
     name = mongoengine.StringField(required = True)
     description = mongoengine.StringField(required = True)
     state = mongoengine.IntField(default = 0)
