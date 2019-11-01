@@ -44,7 +44,6 @@ def set_box_state(s: int, box : Box) -> Box:
 
 def create_split(n: str, d: str, p: int) -> Split:
     split = Split()
-    split.parent_box = b
     split.name = n
     split.description = d
     split.price_cents = p
