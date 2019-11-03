@@ -16,14 +16,25 @@ def create_user(name: str, email: str) -> User:
     return user
 
 
+def find_user_by_id(user_id: str) -> User:
+    user = user.objets.get(id = user_id)
+    print("found user : ", user.name)
+    return user
+
+
 def find_user_by_email(email: str) -> User:
     user = User.objects(email=email).first()
     print("found user : ", user.name)
     return user
 
 
+def add_split_to_user(user: User, split: Split):
+    user.splits.append(split.id)
 
-# box, split stuff ====================================================================================================
+    user.save()
+
+
+# box stuff ====================================================================================================
 
 def create_box(n: str, d: str) -> Box:
     box = Box()
@@ -46,6 +57,9 @@ def find_box_by_id(box_id: str) -> Box:
     return box
 
 
+# split stuff ====================================================================================================
+
+
 def create_split(n: str, d: str, p: int) -> Split:
     split = Split()
     split.name = n
@@ -62,9 +76,9 @@ def find_split_by_id(split_id: str) -> Split:
 
 
 def add_split_to_box(box: Box, split: Split):
-    box.splits.append(split)
+    box.splits.append(split.id)
 
-    box.update()
+    box.save()
 
 
 #def get_box_from_id(id: str) -> Box:
